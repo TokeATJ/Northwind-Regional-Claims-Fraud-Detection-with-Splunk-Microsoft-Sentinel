@@ -1,19 +1,34 @@
 # Northwind-Regional-Healthcare-Cloud-Breach-Investigation
 
-Kali Linux (Attacker)
-        │
-        ▼
-Windows 10 Endpoint
-├─ Sysmon
-├─ MySQL Database
-├─ Synthetic Patient Records
-└─ Azure Monitor Agent
-        │
-        ▼
-Microsoft Sentinel
-        │
-        ▼
-Threat Hunting Investigation
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/88e63e7e-25ce-4595-8ac5-d082cd094ce3" />
+
+
++----------------------+
+|   Kali Linux         |
+|   Attacker System    |
++----------+-----------+
+           |
+           v
++----------------------+
+|  Windows 10 Endpoint |
+|----------------------|
+|  - Sysmon            |
+|  - MySQL Database    |
+|  - Synthetic PHI     |
+|  - Azure Monitor     |
++----------+-----------+
+           |
+           v
++----------------------+
+| Microsoft Sentinel   |
+|  SIEM & Analytics    |
++----------+-----------+
+           |
+           v
++------------------------+
+|   Threat Hunting       |
+|   Investigation        |
++------------------------+
 
 Scenario
 
