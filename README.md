@@ -1,4 +1,4 @@
-# Northwind-Regional-Healthcare-Cloud-Breach-Investigation
+# Northwind Regional Claims Fraud Detection with Splunk Microsoft-Sentinel
 
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/88e63e7e-25ce-4595-8ac5-d082cd094ce3" />
 
@@ -10,22 +10,26 @@ Compromised VPN Account
           |
           v
 Windows 10 Endpoint
-(Sysmon + MySQL + PHI Data)
+(Sysmon + MySQL + Healthcare Data)
           |
-          v
-Azure Monitor Agent
-          |
-          v
-Microsoft Sentinel
-          |
-          v
-Threat Hunting Investigation
-          |
-          v
-Cloud Exfiltration Analysis
+          +----------------+
+          |                |
+          v                v
+      Splunk UF      Azure Monitor Agent
+          |                |
+          v                v
+ Splunk Enterprise   Microsoft Sentinel
+          |                |
+          +-------+--------+
+                  |
+                  v
+      Threat Hunting Investigation
+                  |
+                  v
+      Data Exfiltration Analysis
 
 
-## Scenario
+## Scenario: Compromised Healthcare Billing Analyst Workstation Resulting in Claims and Patient Data Access
 
 A threat actor compromises a third-party contractor VPN account and gains unauthorized access to a hybrid healthcare environment spanning on-premises systems and cloud resources. After successfully authenticating, the attacker conducts PowerShell-based reconnaissance, enumerates users and system information, and accesses a MySQL database containing synthetic patient records.
 
