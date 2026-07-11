@@ -3,19 +3,23 @@
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/88e63e7e-25ce-4595-8ac5-d082cd094ce3" />
 
 
+## Lab Architecture
+
+```text
 Kali Linux (Attacker)
           |
           v
 Compromised VPN Account
           |
           v
-Windows 10 Endpoint
-(Sysmon + MySQL + Healthcare Data)
+Windows 10 Healthcare Workstation
+(Sysmon + MySQL + Synthetic PHI/Claims Data)
           |
           +----------------+
           |                |
           v                v
-      Splunk UF      Azure Monitor Agent
+ Splunk Universal     Azure Monitor Agent
+     Forwarder
           |                |
           v                v
  Splunk Enterprise   Microsoft Sentinel
@@ -23,10 +27,11 @@ Windows 10 Endpoint
           +-------+--------+
                   |
                   v
-      Threat Hunting Investigation
+     Threat Hunting & Investigation
                   |
                   v
-      Data Exfiltration Analysis
+      Data Exfiltration Detection
+``` 
 
 
 ## Scenario: Compromised Healthcare Billing Analyst Workstation Resulting in Claims and Patient Data Access
